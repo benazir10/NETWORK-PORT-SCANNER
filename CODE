@@ -23,6 +23,7 @@ if __name__ == '__main__':
         ports = user_args["port"].split(",")
         for port in ports:
             print(nmap_scan(host, port))
-   
+   except AttributeError:
+        print("Error, please provide the command_line_argument before running.")
 
 
